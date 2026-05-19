@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "smidge",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8732"],
+      "port": 8732
+    },
+    {
+      "name": "smidge-flutter",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8733", "--directory", "flutter_app/build/web"],
+      "port": 8733
+    }
+  ]
+}
