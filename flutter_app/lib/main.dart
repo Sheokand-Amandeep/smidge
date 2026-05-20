@@ -74,7 +74,7 @@ class _RootState extends State<_Root> {
   @override
   Widget build(BuildContext context) {
     if (_onboarded == null) {
-      return const Scaffold(body: ScrSplash());
+      return const ScrSplash();
     }
     if (!_onboarded!) {
       Widget body;
@@ -123,15 +123,11 @@ class _RootState extends State<_Root> {
             },
           );
       }
-      return Scaffold(
-        body: SafeArea(top: false, child: body),
-      );
+      return body;
     }
     return AnimatedBuilder(
       animation: _state,
-      builder: (_, __) => Scaffold(
-        body: SafeArea(top: false, child: ScrHome(state: _state)),
-      ),
+      builder: (_, __) => ScrHome(state: _state),
     );
   }
 }

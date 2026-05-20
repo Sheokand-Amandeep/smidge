@@ -342,18 +342,18 @@ class SmidgeMark extends StatelessWidget {
   }
 }
 
-/// Paper background (cream with subtle noise).
+/// Paper background (cream). Provides the Material ancestor every screen needs
+/// (so Text renders without the debug yellow underline and TextField works),
+/// the cream background, and keyboard-aware resizing for search screens.
 class Paper extends StatelessWidget {
   final Widget child;
   const Paper({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: C.paper,
-      width: double.infinity,
-      height: double.infinity,
-      child: child,
+    return Scaffold(
+      backgroundColor: C.paper,
+      body: SafeArea(top: false, child: child),
     );
   }
 }

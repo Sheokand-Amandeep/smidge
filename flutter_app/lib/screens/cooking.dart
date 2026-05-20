@@ -171,7 +171,7 @@ class _ScrCookingState extends State<ScrCooking> {
                       children: [
                         Text('ingredient',
                             style: GoogleFonts.caveat(
-                                                                fontSize: 14,
+                                fontSize: 14,
                                 color: C.inkFaint)),
                         Text(ing.name,
                             style: const TextStyle(
