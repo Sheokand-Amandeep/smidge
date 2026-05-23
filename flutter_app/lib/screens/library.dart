@@ -20,7 +20,7 @@ class _ScrLibraryState extends State<ScrLibrary> {
   String _search = '';
 
   static const _cats = [
-    ['length', DoodleKind.ruler, C.sky, '17 units · m, km, mi, ft…'],
+    ['length', DoodleKind.ruler, C.sky, '9 units · m, km, mi, ft…'],
     ['mass', DoodleKind.scale, C.mustard, '7 units · kg, lb, oz…'],
     ['volume', DoodleKind.beaker, C.sage, '11 units · L, cup, gal…'],
     ['temperature', DoodleKind.therm, C.terra, '4 scales · °C, °F, K, °R'],
@@ -97,7 +97,7 @@ class _ScrLibraryState extends State<ScrLibrary> {
                       decoration: const InputDecoration(
                         isCollapsed: true,
                         border: InputBorder.none,
-                        hintText: 'Search 200+ units…',
+                        hintText: 'Search units & categories…',
                         hintStyle: TextStyle(fontSize: 13, color: C.inkFaint),
                       ),
                       style: const TextStyle(fontSize: 13, color: C.ink),
