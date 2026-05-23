@@ -395,7 +395,7 @@ class ScrPref extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () => onChange(o[0] as String),
                       child: SkBox(
-                        height: 64,
+                        height: 68,
                         padding: const EdgeInsets.all(14),
                         stroke: on ? C.terra : C.inkSoft,
                         fill: on ? C.terra.withValues(alpha: 0.07) : null,
