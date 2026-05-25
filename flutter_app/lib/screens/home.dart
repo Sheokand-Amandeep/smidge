@@ -26,6 +26,11 @@ class ScrHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cat = kCategories[state.category] ?? kCategories['length']!;
+    final visibleCategories = state.preferredCategories.isEmpty
+        ? kCategories.entries.toList()
+        : kCategories.entries.where((e) {
+            return state.preferredCategories.contains(e.key);
+          }).toList();
     final units = cat.units;
     final fromU = units[state.fromUnit];
     final toU = units[state.toUnit];
@@ -101,7 +106,7 @@ class ScrHome extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              children: kCategories.entries.map((e) {
+              children: visibleCategories.map((e) {
                 final id = e.key;
                 final c = e.value;
                 final active = id == state.category;
