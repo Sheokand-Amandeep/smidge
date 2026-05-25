@@ -17,6 +17,7 @@ import 'cooking.dart';
 import 'medical.dart';
 import 'trades.dart';
 import 'currency.dart';
+import 'settings.dart';
 
 class ScrHome extends StatelessWidget {
   final AppState state;
@@ -79,6 +80,15 @@ class ScrHome extends StatelessWidget {
                       width: 20, height: 14,
                       child: CustomPaint(painter: _HamPainter()),
                     ),
+                  ),
+                ),
+                const SizedBox(width: 4),
+                GestureDetector(
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ScrSettings(state: state))),
+                  behavior: HitTestBehavior.opaque,
+                  child: const Padding(
+                    padding: EdgeInsets.all(4),
+                    child: Icon(Icons.settings_outlined, size: 20, color: C.inkSoft),
                   ),
                 ),
               ],
